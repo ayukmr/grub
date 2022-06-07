@@ -1,0 +1,41 @@
+<head>
+  <%# stylesheet for github markdown %>
+  <link rel="stylesheet" href="markdown.css">
+  <style>
+    .markdown-body {
+      box-sizing: border-box;
+
+      min-width: 200px;
+      max-width: 980px;
+
+      margin: 0 auto;
+      padding: 45px;
+    }
+
+    @media (max-width: 767px) {
+      .markdown-body {
+        padding: 15px;
+      }
+    }
+  </style>
+
+  <style>
+    @media (prefers-color-scheme: light) {
+      <%= Grub::RougeTheme.mode(:light).render(scope: '.highlight') %>
+    }
+
+    @media (prefers-color-scheme: dark) {
+      <%= Grub::RougeTheme.mode(:dark).render(scope: '.highlight') %>
+    }
+  </style>
+
+  <%# set title to filename %>
+  <title>Grub: <%= File.basename(file) %></title>
+</head>
+
+<body>
+  <%# rendered markdown from file %>
+  <article class="markdown-body">
+    <%= rendered %>
+  </article>
+</body>
