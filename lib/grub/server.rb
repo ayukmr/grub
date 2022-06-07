@@ -47,26 +47,20 @@ module Grub
       # print box for served file
       def print_box(file, url)
         # length of messages in box
-        file_length   = 8 + tilde(file).length
-        link_length   = 8 + url.length
+        file_length = 8 + tilde(file).length
+        link_length = 8 + url.length
 
         max_length = [8, file_length, link_length, 25].max
-
-        # padding for messages
-        title_padding  = ' ' * (max_length - 8)
-        file_padding   = ' ' * (max_length - file_length)
-        link_padding   = ' ' * (max_length - link_length)
-        copied_padding = ' ' * (max_length - 25)
 
         # print box
         puts "   ┌#{'─' * (max_length + 6)}┐".green
         puts "   │#{' ' * (max_length + 6)}│".green
-        puts "   #{'│'.green}   #{'Serving!'.green.bold}#{title_padding}   #{'│'.green}"
+        puts "   #{'│'.green}   #{'Serving!'.ljust(max_length).green.bold}   #{'│'.green}"
         puts "   │#{' ' * (max_length + 6)}│".green
-        puts "   #{'│'.green}   • #{'File:'.bold} #{tilde(file)}#{file_padding}   #{'│'.green}"
-        puts "   #{'│'.green}   • #{'Link:'.bold} #{url}#{link_padding}   #{'│'.green}"
+        puts "   #{'│'.green}   • #{'File:'.bold} #{tilde(file).ljust(max_length - 8)}   #{'│'.green}"
+        puts "   #{'│'.green}   • #{'Link:'.bold} #{url.ljust(max_length - 8)}   #{'│'.green}"
         puts "   │#{' ' * (max_length + 6)}│".green
-        puts "   #{'│'.green}   Copied link to clipboard!#{copied_padding}   #{'│'.green}"
+        puts "   #{'│'.green}   #{'Copied link to clipboard!'.ljust(max_length)}   #{'│'.green}"
         puts "   │#{' ' * (max_length + 6)}│".green
         puts "   └#{'─' * (max_length + 6)}┘".green
         puts
