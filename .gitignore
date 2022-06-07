@@ -3,7 +3,7 @@
 
 # bundler
 /.bundle/
-/vendor/bundle
+/vendor/bundle/
 
 # rubygems
 *.gem
