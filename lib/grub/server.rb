@@ -52,18 +52,25 @@ module Grub
 
         max_length = [8, file_length, link_length, 25].max
 
-        # print box
         puts "   ┌#{'─' * (max_length + 6)}┐".green
         puts "   │#{' ' * (max_length + 6)}│".green
+
+        # serving message
         puts "   #{'│'.green}   #{'Serving!'.ljust(max_length).green.bold}   #{'│'.green}"
+
         puts "   │#{' ' * (max_length + 6)}│".green
+
+        # file and link messages
         puts "   #{'│'.green}   • #{'File:'.bold} #{tilde(file).ljust(max_length - 8)}   #{'│'.green}"
         puts "   #{'│'.green}   • #{'Link:'.bold} #{url.ljust(max_length - 8)}   #{'│'.green}"
+
         puts "   │#{' ' * (max_length + 6)}│".green
+
+        # clipboard message
         puts "   #{'│'.green}   #{'Copied link to clipboard!'.ljust(max_length)}   #{'│'.green}"
+
         puts "   │#{' ' * (max_length + 6)}│".green
         puts "   └#{'─' * (max_length + 6)}┘".green
-        puts
       end
     end
   end
