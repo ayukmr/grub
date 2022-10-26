@@ -15,7 +15,7 @@ class String
   def underline; "\e[4m#{self}\e[24m" end
 end
 
-# throw error
+# raise error
 def error(message, exit_code)
   puts "#{'error'.red.bold}: #{message}"
   exit exit_code if exit_code
