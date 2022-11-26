@@ -5,7 +5,7 @@ module Grub
       # run cli with argv
       def run(argv)
         file = argv[0]
-        help if file.nil?
+        help unless file
 
         file = File.expand_path(file)
         error "file `#{tilde(file)}` does not exist", 1 unless File.exist?(file)
