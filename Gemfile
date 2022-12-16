@@ -1,12 +1,12 @@
 source 'https://rubygems.org'
 
 # general
-gem 'clipboard'
-gem 'erb'
-gem 'html-pipeline'
-gem 'rouge'
-gem 'webrick'
+gem 'clipboard',     '~> 1.3'
+gem 'erb',           '~> 2.2'
+gem 'html-pipeline', '~> 2.14'
+gem 'rouge',         '~> 3.30'
+gem 'webrick',       '~> 1.7'
 
 # html pipeline
-gem 'commonmarker'
-gem 'sanitize'
+gem 'commonmarker', '~> 0.23'
+gem 'sanitize',     '~> 6.0'
