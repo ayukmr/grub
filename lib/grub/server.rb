@@ -52,7 +52,7 @@ module Grub
 
         max_length = [8, file_length, link_length, 25].max
 
-        puts "   ┌#{'─' * (max_length + 6)}┐".green
+        puts "   ╭#{'─' * (max_length + 6)}╮".green
         puts "   │#{' ' * (max_length + 6)}│".green
 
         # serving message
@@ -70,7 +70,7 @@ module Grub
         puts "   #{'│'.green}   #{'Copied link to clipboard!'.ljust(max_length)}   #{'│'.green}"
 
         puts "   │#{' ' * (max_length + 6)}│".green
-        puts "   └#{'─' * (max_length + 6)}┘".green
+        puts "   ╰#{'─' * (max_length + 6)}╯".green
       end
     end
   end
