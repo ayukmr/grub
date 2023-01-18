@@ -1,7 +1,7 @@
 <img src="media/logo.png" alt="Grub logo" width="150" align="right">
 
-# `grub` - GitHub README Ultimate Browser
-### `grub` is a command-line tool for viewing Markdown with GitHub styles.
+# `grub` - GitHub README Universal Browser
+### `grub` is a command-line tool for viewing Markdown with GitHub's styles.
 
 ## Usage
 `grub` is easy to use and has no configuration.
