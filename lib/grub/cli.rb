@@ -1,6 +1,6 @@
 module Grub
   # cli for grub
-  module Cli
+  module CLI
     class << self
       # run cli with argv
       def run(argv)
