@@ -8,7 +8,6 @@ module Grub
         help unless file
 
         # ensure file exists
-        file = File.expand_path(file)
         error "file `#{tilde(file)}` does not exist", 1 unless File.exist?(file)
 
         # run server
