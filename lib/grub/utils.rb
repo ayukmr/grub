@@ -13,6 +13,13 @@ class String
   def bold;      "\e[1m#{self}\e[22m" end
   def italic;    "\e[3m#{self}\e[23m" end
   def underline; "\e[4m#{self}\e[24m" end
+
+  # convert home into tilde
+  def tilde
+    sub(Regexp.new(
+      "^#{Regexp.escape(Dir.home)}"
+    ), '~')
+  end
 end
 
 # raise error
@@ -27,9 +34,4 @@ def read_asset(file)
     File.join('assets', file),
     __dir__
   ))
-end
-
-# convert home into tilde
-def tilde(path)
-  path.sub(Dir.home, '~')
 end

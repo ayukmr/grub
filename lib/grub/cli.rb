@@ -8,7 +8,7 @@ module Grub
         help unless file
 
         # ensure file exists
-        error "file `#{tilde(file)}` does not exist", 1 unless File.exist?(file)
+        error "file `#{file.tilde}` does not exist", 1 unless File.exist?(file)
 
         # run server
         if argv[1]

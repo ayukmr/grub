@@ -47,7 +47,7 @@ module Grub
       # print box for served file
       def print_box(file, url)
         # length of messages in box
-        file_length = 8 + tilde(file).length
+        file_length = 8 + file.tilde.length
         link_length = 8 + url.length
 
         max_length = [8, file_length, link_length, 25].max
@@ -61,7 +61,7 @@ module Grub
         puts "   │#{' ' * (max_length + 6)}│".green
 
         # file and link messages
-        puts "   #{'│'.green}   • #{'File:'.bold} #{tilde(file).ljust(max_length - 8)}   #{'│'.green}"
+        puts "   #{'│'.green}   • #{'File:'.bold} #{file.tilde.ljust(max_length - 8)}   #{'│'.green}"
         puts "   #{'│'.green}   • #{'Link:'.bold} #{url.ljust(max_length - 8)}   #{'│'.green}"
 
         puts "   │#{' ' * (max_length + 6)}│".green
