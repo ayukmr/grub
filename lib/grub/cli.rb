@@ -22,7 +22,7 @@ module Grub
       def help
         puts <<~HELP
           #{'Usage'.magenta.bold}:
-            #{'grub'.cyan} #{'<FILE>'.yellow} #{'[PORT]'.yellow}
+            #{'grub'.cyan} #{'<file>'.yellow} #{'[<port>]'.yellow}
 
           #{'Examples'.magenta.bold}:
             #{'grub'.cyan} #{'README.md'.yellow}       serve README.md on localhost:9090
