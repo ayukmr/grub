@@ -23,9 +23,9 @@ class String
 end
 
 # raise error
-def error(message, exit_code = nil)
+def error(message, exit: true)
   puts "#{'error'.red.bold}: #{message}"
-  exit exit_code if exit_code
+  exit 1 if exit
 end
 
 # read asset from assets
