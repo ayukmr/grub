@@ -1,5 +1,5 @@
 module Grub
-  # cli for grub
+  # grub cli
   module CLI
     class << self
       # run cli with argv
