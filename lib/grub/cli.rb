@@ -21,10 +21,10 @@ module Grub
       # show help and exit
       def help
         puts <<~HELP
-          #{'Usage'.magenta.bold}:
+          #{'usage'.magenta.bold}:
             #{'grub'.cyan} #{'<file>'.yellow} #{'[<port>]'.yellow}
 
-          #{'Examples'.magenta.bold}:
+          #{'examples'.magenta.bold}:
             #{'grub'.cyan} #{'README.md'.yellow}       serve README.md on localhost:9090
             #{'grub'.cyan} #{'README.md'.yellow} #{'8080'.yellow}  serve README.md on localhost:8080
         HELP
