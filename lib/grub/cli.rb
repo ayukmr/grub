@@ -22,11 +22,11 @@ module Grub
       def help
         puts <<~HELP
           #{'usage'.magenta.bold}:
-            #{'grub'.cyan} #{'<file>'.yellow} #{'[<port>]'.yellow}
+            #{'grub'.blue} #{'<file>'.yellow} #{'[<port>]'.yellow}
 
           #{'examples'.magenta.bold}:
-            #{'grub'.cyan} #{'README.md'.yellow}       serve README.md on localhost:9090
-            #{'grub'.cyan} #{'README.md'.yellow} #{'8080'.yellow}  serve README.md on localhost:8080
+            #{'grub'.blue} #{'README.md'.yellow}       serve README.md on localhost:9090
+            #{'grub'.blue} #{'README.md'.yellow} #{'8080'.yellow}  serve README.md on localhost:8080
         HELP
 
         exit 0
