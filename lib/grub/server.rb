@@ -10,7 +10,7 @@ module Grub
           Logger:       WEBrick::Log.new(File.open(File::NULL, 'w')),
           AccessLog:    []
         )
-        template = read_asset('webpage.erb')
+        template = read_asset('template.erb')
 
         server.mount_proc("/#{File.basename(file)}") do |_, res|
           pipeline = HTML::Pipeline.new [
