@@ -12,7 +12,7 @@ $ grub README.md
 ```
 
 ## Changing the port
-If you want, you can change the port that `grub` uses to serve the webpage.
+If you want, you can change the port that `grub` uses to serve the website.
 
 Add the port to the `grub` command after the file:
 ```sh
