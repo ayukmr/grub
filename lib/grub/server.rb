@@ -31,7 +31,7 @@ module Grub
           res.body = read_asset('markdown.css')
         end
 
-        # shutdown server on SIGINT
+        # shutdown server on sigint
         trap 'INT' do
           server.shutdown
         end
