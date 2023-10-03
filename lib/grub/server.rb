@@ -13,11 +13,13 @@ module Grub
         template = read_asset('template.erb')
 
         server.mount_proc("/#{File.basename(file)}") do |_, res|
-          pipeline = HTML::Pipeline.new [
+          filters = [
             HTML::Pipeline::MarkdownFilter,
             HTML::Pipeline::SanitizationFilter,
             HTML::Pipeline::SyntaxHighlightFilter
-          ], { unsafe: true }
+          ]
+
+          pipeline = HTML::Pipeline.new(filters, { unsafe: true })
 
           # render markdown from file
           result   = pipeline.call(File.read(file))
